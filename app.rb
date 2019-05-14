@@ -26,8 +26,8 @@ class App < Sinatra::Base
     @w4 = params[:word4]
     @w5 = params[:word5]
     "#{@w1} #{@w2} #{@w3} #{@w4} #{@w5}."
-
   end
+
 ########## ANOTHER OPTION ##############
   # get '/:operation/:num1/:num2' do
   #   ops = {
@@ -44,6 +44,7 @@ class App < Sinatra::Base
   #   num1.send(method_name, num2).to_s
   # end
 ##########################################
+
   get '/:operation/:number1/:number2' do
     @operation = params[:operation]
     @num1 = params[:number1].to_i
