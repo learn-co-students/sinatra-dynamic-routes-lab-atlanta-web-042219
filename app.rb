@@ -28,7 +28,22 @@ class App < Sinatra::Base
     "#{@w1} #{@w2} #{@w3} #{@w4} #{@w5}."
 
   end
-
+########## ANOTHER OPTION ##############
+  # get '/:operation/:num1/:num2' do
+  #   ops = {
+  #     "add" => :+,
+  #     "subtract" => :-,
+  #     "multiply" => :*,
+  #     "divide" => :/,
+  #     "modulo" => :%,
+  #     "exponent" => :**
+  #   }
+  #   num1 = params[:number1].to_i
+  #   num2 = params[:number2].to_i
+  #   method_name = ops[params[:operation]]
+  #   num1.send(method_name, num2).to_s
+  # end
+##########################################
   get '/:operation/:number1/:number2' do
     @operation = params[:operation]
     @num1 = params[:number1].to_i
